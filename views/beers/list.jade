@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  strong Minhas cervejas
+  ul
+    for cerveja in cervejas
+      li 
+        span Cerveja: #{cerveja.name} <br/>
+        span Categoria: #{cerveja.category} <br/>
+        span Descrição: #{cerveja.description} <br/>
+        span Teor: #{cerveja.alcohol}
+
+      a(href="/beers/#{cerveja._id}") Editar
